@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IMP_InAppFeedBack</string>
+    <string name="action_settings">Settings</string>
+    <string name="imp_instabug_mainoptions_reportbug">Report a bug</string>
+    <string name="imp_instabug_mainoptions_feedback">Feedback</string>
+    <string name="imp_instabug_mainoptions_dismiss">Dismiss</string>
+</resources>
