@@ -1,4 +1,4 @@
-package inappfeedback.imp.com.inappfeedback.shakedetectsensor;
+package com.js.inappfeedback.shakedetectsensor;
 
 import android.content.Context;
 import android.hardware.Sensor;

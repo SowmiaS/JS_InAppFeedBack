@@ -1,16 +1,16 @@
-package inappfeedback.imp.com.inappfeedback.core;
+package com.js.inappfeedback.core;
 
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.view.WindowManager;
 
-import inappfeedback.imp.com.inappfeedback.shakedetectsensor.DeviceShakeDetector;
-import inappfeedback.imp.com.inappfeedback.views.JSMainOptionsView;
+import com.js.inappfeedback.shakedetectsensor.DeviceShakeDetector;
+import com.js.inappfeedback.views.JSMainOptionsView;
 
 /**
  * Created by sowmia on 17/12/15.
  */
-public class JSInAppFeedbackCoreImpl implements JSIInAppFeedBackCore, DeviceShakeDetector.DeviceShakeListener , JSMainOptionsView.IMPINstaBugMainOptionsActions{
+public class JSInAppFeedbackCoreImpl implements JSIInAppFeedBackCore, DeviceShakeDetector.DeviceShakeListener , JSMainOptionsView.JSMainOptionsActions{
 
     private DeviceShakeDetector mDeviceShakeDetector;
     private Context mContext;
@@ -22,7 +22,7 @@ public class JSInAppFeedbackCoreImpl implements JSIInAppFeedBackCore, DeviceShak
         mDeviceShakeDetector = new DeviceShakeDetector(context, this);
     }
 
-    private void launchImpInstaBugMainOptionsView(Context context) {
+    private void launchMainOptionsView(Context context) {
         WindowManager.LayoutParams params = new WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,
                 400,
@@ -37,7 +37,7 @@ public class JSInAppFeedbackCoreImpl implements JSIInAppFeedBackCore, DeviceShak
 
     @Override
     public void onShakeOfDevice() {
-        launchImpInstaBugMainOptionsView(mContext);
+        launchMainOptionsView(mContext);
     }
 
     private void remomveViewFromWindow(Context context){

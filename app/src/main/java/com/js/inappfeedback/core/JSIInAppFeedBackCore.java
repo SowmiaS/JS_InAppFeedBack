@@ -1,4 +1,4 @@
-package inappfeedback.imp.com.inappfeedback.core;
+package com.js.inappfeedback.core;
 
 import android.content.Context;
 

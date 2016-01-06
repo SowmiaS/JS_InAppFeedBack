@@ -1,4 +1,4 @@
-package inappfeedback.imp.com.inappfeedback.utils;
+package com.js.inappfeedback.utils;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.FileOutputStream;
 
-import inappfeedback.imp.com.inappfeedback.utils.model.EmailStructure;
+import com.js.inappfeedback.utils.model.EmailStructure;
 
 /**
  * Created by sowmia on 17/12/15.

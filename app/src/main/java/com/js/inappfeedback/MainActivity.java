@@ -1,4 +1,4 @@
-package inappfeedback.imp.com.inappfeedback;
+package com.js.inappfeedback;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import android.widget.ImageView;
 
 import java.io.File;
 
-import inappfeedback.imp.com.imp_inappfeedback.R;
-import inappfeedback.imp.com.inappfeedback.core.JSInAppFeedBack;
-import inappfeedback.imp.com.inappfeedback.utils.AndroidBaseUtils;
-import inappfeedback.imp.com.inappfeedback.utils.model.EmailStructure;
+import com.js.inappfeedback.R;
+import com.js.inappfeedback.core.JSInAppFeedBack;
+import com.js.inappfeedback.utils.AndroidBaseUtils;
+import com.js.inappfeedback.utils.model.EmailStructure;
 
 public class MainActivity extends FragmentActivity {
 

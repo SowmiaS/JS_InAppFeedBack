@@ -1,4 +1,4 @@
-package inappfeedback.imp.com.inappfeedback.views;
+package com.js.inappfeedback.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,25 +6,25 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import inappfeedback.imp.com.imp_inappfeedback.R;
-import inappfeedback.imp.com.inappfeedback.utils.AndroidBaseUtils;
+import com.js.inappfeedback.R;
+import com.js.inappfeedback.utils.AndroidBaseUtils;
 
 /**
  * Created by sowmia on 17/12/15.
  */
 public class JSMainOptionsView extends LinearLayout implements View.OnClickListener{
 
-    private IMPINstaBugMainOptionsActions mImpInstaBugMainOptionsAction;
+    private JSMainOptionsActions mJSMainOptionsAction;
 
     private JSMainOptionsView(Context context) {
         super(context);
         init(context);
     }
 
-    public JSMainOptionsView(Context context, IMPINstaBugMainOptionsActions mImpInstaBugMainOptionsAction) {
+    public JSMainOptionsView(Context context, JSMainOptionsActions mImpInstaBugMainOptionsAction) {
         super(context);
         init(context);
-        this.mImpInstaBugMainOptionsAction = mImpInstaBugMainOptionsAction;
+        this.mJSMainOptionsAction = mImpInstaBugMainOptionsAction;
     }
 
 
@@ -55,25 +55,25 @@ public class JSMainOptionsView extends LinearLayout implements View.OnClickListe
         Log.d("IMP_InstaBug","Report a Bug");
         if(v.getId() == R.id.txt_instabug_mainoptions_reportbug){
             Log.d("IMP_InstaBug","Report a Bug");
-            if(mImpInstaBugMainOptionsAction !=null){
-                mImpInstaBugMainOptionsAction.onClickOfReportBug();
+            if(mJSMainOptionsAction !=null){
+                mJSMainOptionsAction.onClickOfReportBug();
             }
         }else if(v.getId() == R.id.txt_instabug_mainoptions_feedback){
             Log.d("IMP_InstaBug","FeedBack");
 
-            if(mImpInstaBugMainOptionsAction !=null){
-                mImpInstaBugMainOptionsAction.onClickOfFeedBack();
+            if(mJSMainOptionsAction !=null){
+                mJSMainOptionsAction.onClickOfFeedBack();
             }
         }else if(v.getId() == R.id.txt_instabug_mainoptions_dismiss){
             Log.d("IMP_InstaBug","Dismiss");
-            if(mImpInstaBugMainOptionsAction !=null){
-                mImpInstaBugMainOptionsAction.onClickOfDismiss();
+            if(mJSMainOptionsAction !=null){
+                mJSMainOptionsAction.onClickOfDismiss();
             }
         }
     }
 
 
-    public interface IMPINstaBugMainOptionsActions{
+    public interface JSMainOptionsActions{
         public void onClickOfReportBug();
         public void onClickOfFeedBack();
         public void onClickOfDismiss();

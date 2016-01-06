@@ -1,4 +1,4 @@
-package inappfeedback.imp.com.inappfeedback.views;
+package com.js.inappfeedback.views;
 
 import android.content.Context;
 import android.util.AttributeSet;

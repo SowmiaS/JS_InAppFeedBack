@@ -1,4 +1,4 @@
-package inappfeedback.imp.com.inappfeedback.utils.model;
+package com.js.inappfeedback.utils.model;
 
 import android.net.Uri;
 

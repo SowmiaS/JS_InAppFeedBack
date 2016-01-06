@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="inappfeedback.imp.com.inappfeedback.MainActivity"
+            android:name="com.js.inappfeedback.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
