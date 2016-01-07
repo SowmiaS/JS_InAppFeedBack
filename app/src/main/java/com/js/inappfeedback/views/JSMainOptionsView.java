@@ -40,7 +40,7 @@ public class JSMainOptionsView extends LinearLayout implements View.OnClickListe
 
     private void init(Context context) {
         setOrientation(VERTICAL);
-        AndroidBaseUtils.inflateLayout(context, R.layout.imp_instabug_mainoptions, this);
+        AndroidBaseUtils.inflateLayout(context, R.layout.js_mainoptions, this);
         setClickListeners();
     }
 

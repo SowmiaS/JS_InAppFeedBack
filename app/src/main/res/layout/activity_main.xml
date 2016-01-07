@@ -13,7 +13,7 @@
         android:textSize="40dp"
         android:text="Hi in Drawing View"/>
 
-    <inappfeedback.imp.com.inappfeedback.views.JSDrawingView
+    <com.js.inappfeedback.views.JSDrawingView
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/screen"/>
