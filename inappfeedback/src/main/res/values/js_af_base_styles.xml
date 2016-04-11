@@ -1,0 +1,13 @@
+<resources>
+
+   <style name="af_base_button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">@dimen/af_base_dimen_button_height</item>
+   </style>
+
+
+    <style name="af_base_editext">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>

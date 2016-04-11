@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">inappfeedback</string>
+    <string name="af_button_topbar_cancel">Cancel</string>
+    <string name="af_button_topbar_send">Send</string>
+</resources>

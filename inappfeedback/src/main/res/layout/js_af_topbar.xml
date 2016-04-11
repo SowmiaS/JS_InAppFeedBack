@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/af_ll_topbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/af_base_dimen_common_leftright_padding"
+    android:background="@color/af_base_color_fluorescent_green">
+
+    <Button
+        android:id="@+id/af_button_topbar_cancel"
+        style="@style/af_base_button"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center|left"
+        android:text="@string/af_button_topbar_cancel"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/af_button_bottombar_send"
+        style="@style/af_base_button"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center|right"
+        android:text="@string/af_button_topbar_send"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

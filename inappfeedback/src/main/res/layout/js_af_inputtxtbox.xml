@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/af_base_dimen_10dp">
+
+    <EditText
+        android:id="@+id/af_inputbox_edittext_feedbackdesc"
+        style="@style/af_base_editext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/af_base_dimen_55dp"
+        android:layout_gravity="center|right"
+        />
+
+    <Button
+        android:id="@+id/af_inputbox_button_ok"
+        style="@style/af_base_button"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@color/af_base_color_fluorescent_green"
+        />
+</LinearLayout>

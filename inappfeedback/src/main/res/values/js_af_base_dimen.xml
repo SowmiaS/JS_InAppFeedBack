@@ -1,0 +1,10 @@
+<resources>
+
+    <dimen name="af_base_dimen_55dp">55dp</dimen>
+    <dimen name="af_base_dimen_10dp">10dp</dimen>
+
+
+    <dimen name="af_base_dimen_common_leftright_padding">@dimen/af_base_dimen_10dp</dimen>
+    <dimen name="af_base_dimen_button_height">@dimen/af_base_dimen_55dp</dimen>
+
+</resources>
