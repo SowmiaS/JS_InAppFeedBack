@@ -1,10 +1,14 @@
 <resources>
 
     <dimen name="af_base_dimen_55dp">55dp</dimen>
+    <dimen name="af_base_dimen_16dp">16dp</dimen>
     <dimen name="af_base_dimen_10dp">10dp</dimen>
+    <dimen name="af_base_dimen_5dp">5dp</dimen>
+    <dimen name="af_base_dimen_2dp">2dp</dimen>
 
-
-    <dimen name="af_base_dimen_common_leftright_padding">@dimen/af_base_dimen_10dp</dimen>
+    <dimen name="af_base_dimen_common_leftright_layout_padding">@dimen/af_base_dimen_10dp</dimen>
+    <dimen name="af_base_dimen_common_leftright_view_padding">@dimen/af_base_dimen_5dp</dimen>
     <dimen name="af_base_dimen_button_height">@dimen/af_base_dimen_55dp</dimen>
+    <dimen name="af_base_dimen_button_textsize">@dimen/af_base_dimen_16dp</dimen>
 
 </resources>

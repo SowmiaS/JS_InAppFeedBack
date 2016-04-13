@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/af_ll_topbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/af_base_color_fluorescent_green"
+    android:padding="@dimen/af_base_dimen_common_leftright_view_padding">
+
+    <Button
+        android:id="@+id/af_button_topbar_cancel"
+        style="@style/af_base_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text="@string/af_string_button_topbar_cancel"
+        android:textColor="@android:color/white"
+        />
+
+
+    <Button
+        android:id="@+id/af_button_topbar_send"
+        style="@style/af_base_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center|right"
+        android:text="@string/af_string_button_topbar_send"
+        android:textColor="@android:color/white"
+        />
+
+</RelativeLayout>
