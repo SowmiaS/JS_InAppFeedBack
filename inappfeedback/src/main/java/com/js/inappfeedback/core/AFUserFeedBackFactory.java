@@ -2,6 +2,7 @@ package com.js.inappfeedback.core;
 
 import android.content.Context;
 
+import com.js.inappfeedback.deviceshakesensor.AFDeviceShakeDetector;
 import com.js.inappfeedback.ui.AFUserFeedBackMainView;
 import com.js.inappfeedback.userfeedbacksender.AFMailUserFeedbackSender;
 import com.js.inappfeedback.userfeedbacksender.AFServiceUserFeedbackSender;
@@ -14,37 +15,30 @@ public class AFUserFeedBackFactory {
 
     private AFUserFeedBackMainView userFeedBackMainView;
     private IAFUserFeedbackSender sender;
-
+    private AFDeviceShakeDetector shakeDetector;
     private static AFUserFeedBackFactory userFeedbackFactory;
 
     private AFUserFeedBackFactory(Context context, String emailId) {
         userFeedBackMainView = new AFUserFeedBackMainView(context);
-        sender = new AFMailUserFeedbackSender(emailId);
+        if (emailId != null && emailId != "")
+            sender = new AFMailUserFeedbackSender(emailId);
+        else
+            sender = new AFServiceUserFeedbackSender();
+        shakeDetector = new AFDeviceShakeDetector(context);
     }
 
-    private AFUserFeedBackFactory(Context context) {
-        userFeedBackMainView = new AFUserFeedBackMainView(context);
-        sender = new AFServiceUserFeedbackSender();
-    }
 
-
-    public static AFUserFeedBackFactory getInstance(Context context){
-        if(userFeedbackFactory == null){
-            userFeedbackFactory = new AFUserFeedBackFactory(context);
-        }
-        return userFeedbackFactory;
-    }
-
-    public static AFUserFeedBackFactory getInstance(Context context, String emailId){
-        if(userFeedbackFactory == null){
+    public static AFUserFeedBackFactory getInstance(Context context, String emailId) {
+        if (userFeedbackFactory == null) {
             userFeedbackFactory = new AFUserFeedBackFactory(context, emailId);
         }
         return userFeedbackFactory;
     }
 
 
-
-
+    public AFDeviceShakeDetector getShakeDetector() {
+        return shakeDetector;
+    }
 
     public AFUserFeedBackMainView getUserFeedBackMainView() {
         return userFeedBackMainView;

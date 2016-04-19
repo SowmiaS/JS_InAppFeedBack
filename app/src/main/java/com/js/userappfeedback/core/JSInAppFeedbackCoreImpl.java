@@ -19,7 +19,7 @@ public class JSInAppFeedbackCoreImpl implements com.js.userappfeedback.core.JSII
     @Override
     public void intialise(Context context) {
         this.mContext = context;
-        mDeviceShakeDetector = new DeviceShakeDetector(context, this);
+
     }
 
     private void launchMainOptionsView(Context context) {

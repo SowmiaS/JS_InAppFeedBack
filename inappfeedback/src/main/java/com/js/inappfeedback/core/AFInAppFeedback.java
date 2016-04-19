@@ -1,37 +1,54 @@
 package com.js.inappfeedback.core;
 
 import android.content.Context;
+import android.support.v4.app.FragmentActivity;
 import android.view.ViewGroup;
 
+import com.js.inappfeedback.deviceshakesensor.AFDeviceShakeDetector;
 import com.js.inappfeedback.ui.AFUserFeedBackMainView;
 
 /**
  * Created by sowmi on 14/04/16.
  */
-public class AFInAppFeedback implements AFUserFeedBackMainView.IAFUserFeedBackMainViewActionListener{
+public class AFInAppFeedback implements AFUserFeedBackMainView.IAFUserFeedBackMainViewActionListener, AFDeviceShakeDetector.DeviceShakeListener{
 
     private static Context mContext;
-    private static  AFInAppFeedback inAppFeedback = new AFInAppFeedback();
+    private static  AFInAppFeedback inAppFeedback ;
     private static AFUserFeedBackFactory factory = null;
-    private String senderEmailId = "";
+
+
+    public AFInAppFeedback(Context context, String senderEmailId) {
+        mContext = context;
+        factory = AFUserFeedBackFactory.getInstance(context , senderEmailId);
+        factory.getShakeDetector().setmDeviceShakeListener(this);
+    }
+
 
     public static AFInAppFeedback initialise(Context context){
-        mContext = context;
-        factory = AFUserFeedBackFactory.getInstance(context);
+        if( inAppFeedback == null ){
+            inAppFeedback = new AFInAppFeedback(context, null);
+        }
         return inAppFeedback;
     }
 
     public static AFInAppFeedback initialise(Context context, String senderEmailId){
-        mContext = context;
-        factory = AFUserFeedBackFactory.getInstance(context, senderEmailId);
+        if( inAppFeedback == null ){
+            inAppFeedback = new AFInAppFeedback(context, senderEmailId);
+        }
         return inAppFeedback;
     }
 
-
-    public void showFeedBackOptions(Context context, ViewGroup container){
+    public void showFeedBackOptions(){
         AFUserFeedBackMainView mainView = factory.getUserFeedBackMainView();
         mainView.setListener(this);
-        container.addView(mainView);
+        final ViewGroup viewGroup = (ViewGroup) (( (FragmentActivity) mContext )
+                .findViewById(android.R.id.content) );
+        if(mainView.getParent() != null){
+            ((ViewGroup)mainView.getParent()).removeView(mainView);
+        }
+        ((ViewGroup)viewGroup.getChildAt(0)).addView(mainView);
+       // ((ViewGroup)((FragmentActivity)mContext).getWindow().getDecorView().getRootView()).addView(mainView);
+        //container.addView(mainView);
         //TODO: Attach the view to current window
     }
 
@@ -43,5 +60,10 @@ public class AFInAppFeedback implements AFUserFeedBackMainView.IAFUserFeedBackMa
     @Override
     public void onSendBtnClick() {
         factory.getSender().sendFeedBack(mContext,factory.getUserFeedBackMainView().getScreenshot(), factory.getUserFeedBackMainView().getInputString());
+    }
+
+    @Override
+    public void onShakeOfDevice() {
+       showFeedBackOptions();
     }
 }

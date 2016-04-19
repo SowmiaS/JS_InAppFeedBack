@@ -3,7 +3,6 @@ package com.js.userappfeedback;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.js.inappfeedback.core.AFInAppFeedback;
 
@@ -16,7 +15,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         AFInAppFeedback feedback = AFInAppFeedback.initialise(this, "sowmiasundar@gmail.com");
-        feedback.showFeedBackOptions(this, (LinearLayout) findViewById(R.id.container));
+        //feedback.showFeedBackOptions(this, (LinearLayout) findViewById(R.id.container));
 //        JSInAppFeedBack.initialise(this);
 //        JSInAppFeedBack.setupEmailId("sowmia.sundararajan@bnpparibasfortis.com");
     }
